@@ -1,4 +1,4 @@
-import data from "./data.json" assert { type: "json" };
+import data from "../../data.json" assert { type: "json" };
 
 export const currentUserAvatar = data.currentUser.image.png;
 export const currentUsername = data.currentUser.username;

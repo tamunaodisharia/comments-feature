@@ -1,10 +1,13 @@
 import { createComment, addCommentComponent } from "./comment.js";
-import data from "./data.json" assert { type: "json" };
+import data from "../../data.json" assert { type: "json" };
 
 // push data.json to localStorage
 export function pushToLocalStorage() {
-  for (let key in data) {
-    localStorage.setItem(key, JSON.stringify(data[key]));
+  if (localStorage.getItem("comments")) {
+  } else {
+    for (let key in data) {
+      localStorage.setItem(key, JSON.stringify(data[key]));
+    }
   }
 }
 
